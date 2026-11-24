@@ -9,27 +9,26 @@ export function Footer() {
       <div className="mx-auto flex max-w-[1400px] flex-col gap-10">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-start">
           <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.32em] text-foreground">
+            <div className="flex items-center gap-2.5 font-sans text-sm font-bold uppercase tracking-widest text-foreground">
               <span
                 aria-hidden
-                className="inline-block h-2 w-2 rounded-full bg-accent shadow-[0_0_12px_rgba(212,162,47,0.9)]"
+                className="inline-block h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_15px_rgba(230,0,0,0.9)]"
               />
-              Stark / Industries
+              OrdoMind
             </div>
             <p className="max-w-[38ch] font-sans text-sm leading-relaxed text-zinc-400">
-              &copy; Stark Industries &mdash; 10880 Malibu Point, 90265.
-              Registered trademark of the Office of Howard &amp; Anthony E. Stark.
+              &copy; 2026 Nova Vera AI &amp; Robotics Lab. Independent Intelligence &amp; Scheduling Engine.
             </p>
           </div>
 
           <nav className="grid grid-cols-2 gap-x-10 gap-y-3 md:grid-cols-3">
             {[
-              ["Mark I", "Cave, Afghanistan"],
-              ["Mark III", "Monaco Circuit"],
-              ["Mark VII", "Stark Tower"],
-              ["Mark XLIV", "Hulkbuster"],
-              ["Mark L", "Titan"],
-              ["Mark LXXXV", "Endgame"],
+              ["Features", "Intelligent Scheduling"],
+              ["Technology", "Deterministic Engine"],
+              ["Pricing", "Commercial Software"],
+              ["Documentation", "User Guide"],
+              ["GitHub", "Source Code"],
+              ["Nova Vera AI", "Company Lab"],
             ].map(([name, note]) => (
               <a
                 key={name}
@@ -53,8 +52,8 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-2 border-t border-white/5 pt-6 font-mono text-[10px] uppercase tracking-[0.28em] text-zinc-500 md:flex-row md:items-center md:justify-between">
-          <span>Build 2026.04.21 &nbsp;&middot;&nbsp; Mark LXXXV &nbsp;&middot;&nbsp; J.A.R.V.I.S. Online</span>
-          <span>Proof of concept &mdash; fan art, no commercial use</span>
+          <span>Build 2026 &nbsp;&middot;&nbsp; OrdoMind &nbsp;&middot;&nbsp; Engine Online</span>
+          <span>Developed by Nova Vera AI & Robotics Lab</span>
         </div>
       </div>
     </footer>
