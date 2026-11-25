@@ -1,7 +1,7 @@
 ﻿export const CINE_FRAME_COUNT = 169;
 const prefix = process.env.NODE_ENV === "development" ? "" : "/ordomind.novaveraai";
 export const cineFramePath = (n: number) =>
-  `${prefix}/frames/frame_${String(n).padStart(4, "0")}.jpg`;
+  `${prefix}/frames2/frame_${String(n).padStart(4, "0")}.jpg`;
 
 export type Beat = {
   id: string;
