@@ -1,7 +1,11 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { EnvelopeSimple, Globe, GithubLogo } from "@phosphor-icons/react/dist/ssr";
 
 export function Contact() {
+  const logoSrc = process.env.NODE_ENV === "development" 
+    ? "/novavera-logo.png" 
+    : "/ordomind.novaveraai/novavera-logo.png";
+
   return (
     <section id="contact" className="relative border-t border-white/5 bg-background px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-12 text-center">
@@ -12,22 +16,22 @@ export function Contact() {
           <h2 className="font-sans text-4xl font-semibold tracking-tighter text-foreground md:text-6xl">
             Ready to organize <span className="text-accent">your time?</span>
           </h2>
-          <p className="max-w-[42ch] mx-auto font-sans text-base text-zinc-400">
+          <p className="max-w-[60ch] mx-auto font-sans text-base text-zinc-400">
             Have questions about OrdoMind or need enterprise licensing? Reach out to Nova Vera AI &amp; Robotics Lab.
           </p>
 
-          {/* Nova Vera brand logo */}
           <div className="mt-6 flex flex-col items-center gap-2">
             <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-zinc-500">
               Developed by
             </span>
-            <Image
-              src="/novavera-logo.png"
-              alt="Nova Vera AI & Robotics Lab"
-              width={120}
-              height={40}
-              className="h-10 w-auto object-contain opacity-80 transition-opacity hover:opacity-100"
-            />
+            <div className="relative h-16 w-48">
+              <Image
+                src={logoSrc}
+                alt="Nova Vera AI & Robotics Lab"
+                fill
+                className="object-contain opacity-90 transition-opacity hover:opacity-100"
+              />
+            </div>
           </div>
         </div>
 

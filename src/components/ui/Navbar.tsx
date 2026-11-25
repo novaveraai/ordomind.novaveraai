@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -7,6 +7,9 @@ import { ArrowUpRight } from "@phosphor-icons/react";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const logoSrc = process.env.NODE_ENV === "development" 
+    ? "/ordomind-logo.png" 
+    : "/ordomind.novaveraai/ordomind-logo.png";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -19,7 +22,7 @@ export function Navbar() {
     <header className={`fixed inset-x-0 top-0 z-40 w-full transition-[background-color,backdrop-filter,border-color] duration-300 ${scrolled ? "border-b border-white/10 bg-black/60 backdrop-blur-2xl backdrop-saturate-150" : "border-b border-transparent bg-transparent"}`}>
       <div className="flex w-full items-center justify-between px-6 py-4 md:px-10 md:py-5">
         <Link href="/" className="flex items-center gap-3 font-sans text-sm font-bold uppercase tracking-widest text-foreground transition-opacity hover:opacity-80">
-          <Image src="/ordomind-logo.png" alt="OrdoMind Logo" width={32} height={32} className="h-8 w-8 object-contain drop-shadow-[0_0_10px_rgba(230,0,0,0.5)]" />
+          <Image src={logoSrc} alt="OrdoMind Logo" width={32} height={32} className="h-8 w-8 object-contain drop-shadow-[0_0_10px_rgba(230,0,0,0.5)]" />
           OrdoMind
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
